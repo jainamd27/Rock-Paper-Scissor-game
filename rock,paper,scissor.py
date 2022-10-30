@@ -1,6 +1,7 @@
 import random
 import os
 from time import sleep
+import platform
 
 print("welcome to stone paper scissor game\n")
 print("you have 7 chances to win the game\n")
@@ -22,6 +23,8 @@ while chances >0:
         e = "invalid input\n"
         print(e)
         
+    continue
+    
     chances -=1
 
     if ai_choice == 1 and player_choice == 2:
@@ -87,4 +90,8 @@ print("Screen will now be cleared in 4 Seconds")
 
 sleep(4)
 
-os.system('clear')
+if platform.system() == "Linux":
+    os.system('clear')
+    
+else:
+    os.system('cls')
