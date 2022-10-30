@@ -22,8 +22,7 @@ while chances >0:
     except Exception as e:
         e = "invalid input\n"
         print(e)
-        
-    continue
+        continue
     
     chances -=1
 
